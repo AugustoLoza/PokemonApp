@@ -9,10 +9,10 @@
     ],
     
     "height": 6,
-    "held_items": [],
+    "
     "id": 4,
     "is_default": true,
-    "location_area_encounters": "https://pokeapi.co/api/v2/pokemon/4/encounters",
+    
 
     "name": "charmander",
     "order": 5,
