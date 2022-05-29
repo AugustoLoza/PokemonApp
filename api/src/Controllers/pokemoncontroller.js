@@ -15,8 +15,8 @@ const attributesPoke = (pokedata)=>{
         speed: pokedata.stats[5].base_stat,
         height: pokedata.height,
         weight: pokedata.weight,
-        sprite: pokedata.sprites.dream_world.front_default,// de aca sale la imagen, hay muchas para elegir
-        types: pokedata.types.lenght > 2 ? [{name: pokedata.types[0].type.name}] : [{name: pokedata.types[0].type.name},{name: pokedata.types[1].type.name}]// operador ternario, me pregunto si el pokemon tiene mas de un type, si no los tiene muestro el primero y unico, si los tiene, muestro los dos que tiene
+        sprite: pokedata.sprites.other.dream_world.front_default,// de aca sale la imagen, hay muchas para elegir
+        types: pokedata.types.length < 2 ? [{name: pokedata.types[0].type.name}] : [{name: pokedata.types[0].type.name},{name: pokedata.types[1].type.name}]// operador ternario, me pregunto si el pokemon tiene mas de un type, si no los tiene muestro el primero y unico, si los tiene, muestro los dos que tiene
 
 
     };
@@ -26,13 +26,13 @@ const attributesPoke = (pokedata)=>{
 const ApiPoke = async() =>{
    try {
        const TotalPokeFirstURL = await axios.get(URL_API_POKEMON40);// devuelve los primeros 40 poke con otra url
-       const TotalPokeSecondURL = TotalPokeFirstURL.data.result.map(obj=>axios.get(obj.url))//hago axios pero a la segunda URL
-       const infoUrloPoke = await axios.all(TotalPokeSecondURL)//solicitudes simuiltaneas
+       const TotalPokeSecondURL = TotalPokeFirstURL.data.results.map(obj=>axios.get(obj.url));//hago axios pero a la segunda URL
+       const infoUrloPoke = await axios.all(TotalPokeSecondURL);//solicitudes simuiltaneas
 
-       let pokemons = infoUrloPoke.map(obj=>obj.data)// obtengo la data completa de cada pokemon, data en bruto
+       let pokemons = infoUrloPoke.map(obj=>obj.data);// obtengo la data completa de cada pokemon, data en bruto
        let infoPoke = pokemons.map(poke_data=>attributesPoke(poke_data))//ahora cuando llame a esta funcion me va a traer todos los Poke de la api pero con los atributos de attributesPoke, filtre la info
 
-       return infoPoke;
+       return infoPoke
 
    } catch (error) {
        console.log(error);
@@ -55,10 +55,11 @@ const DbPoke = async()=>{
         console.log(error);
        return error; 
     }
-}
+};
 
 const PokeAPIandDB = async()=>{
-   try {const apiPokeData = await ApiPoke();
+   try {
+    const apiPokeData = await ApiPoke();
     const DbPokeData = await DbPoke();
 
     return [...apiPokeData, ... DbPokeData];
@@ -69,10 +70,11 @@ const PokeAPIandDB = async()=>{
 }
 //me permite traeer el pokemon pasado por query, lo busco tanto en mi DB como en la API
 const PokeByName = async(name) =>{
+    const name1 = name
     try {
-        const searchPokeNameInDb = await findOne({
-            where: {name},
-            include: {model:type}
+        const searchPokeNameInDb = await Pokemon.findOne({
+            where: { name: name1 },
+            include: { model: Type }
         })
         if(searchPokeNameInDb){
             let pokeDbName = {
@@ -85,12 +87,12 @@ const PokeByName = async(name) =>{
                 height: searchPokeNameInDb.height,
                 weight: searchPokeNameInDb.weight,
                 sprite: searchPokeNameInDb.sprite,
-                types: searchPokeNameInDb.types.lenght > 2 ? [searchPokeNameInDb.types[0]] : [searchPokeNameInDb.types[0], searchPokeNameInDb.types[1]]
+                types: searchPokeNameInDb.types.length < 2 ? [searchPokeNameInDb.types[0]] : [searchPokeNameInDb.types[0], searchPokeNameInDb.types[1]]
             }
-            return pokeDbName
+            return pokeDbName;
         }else{
-            const searchPokeInAPI = await axios.get(`${URL_API_POKEMON_NAME_ID}${name.tolowerCase()}`)//primero obtengo al pokemon de URL/name
-            const PokeFound = attributesPoke(searchPokeInAPI.data)//obtengo los atributos que quiero de dicho Pokemon
+            const searchPokeInAPI = await axios.get(`${URL_API_POKEMON_NAME_ID}${name1.toLowerCase()}`);//primero obtengo al pokemon de URL/name
+            const PokeFound = attributesPoke(searchPokeInAPI.data);//obtengo los atributos que quiero de dicho Pokemon
             return PokeFound
         }
         
