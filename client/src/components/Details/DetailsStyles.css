@@ -1,0 +1,182 @@
+/*.background {
+  padding-top: 10%;
+}
+
+.imgDetais {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cardsDetails {
+  max-width: 35%;
+  height: 65%;
+  display: flow-root;
+  position: relative;
+  margin: auto;
+  margin-top: auto;
+  background: #11111194;
+  border: none;
+  z-index: 0;
+  border-radius: 5px;
+  margin-top: -50px;
+}
+
+.cardsDetails:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.cardsDetails:before {
+  opacity: 1;
+}
+
+.cardsDetails:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
+.pokeName {
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 45px;
+  margin-top: 14px;
+  padding-top: 16px;
+  color: #ff02a8;
+}
+
+.types{
+  font-weight: bold;
+  font-size: 36px;
+  color: #ff02a8;
+  align-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.pokeImage {
+  max-width: 200px;
+  max-height: 200px;
+  margin: auto;
+  position: relative;
+  align-content: center;
+  display: flex;
+}
+
+.description {
+  font-family: "Times New Roman", Times, serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.2fr;
+  grid-row-gap: 1px;
+  margin-left: 20%;
+  color: #02ffc4;
+  text-shadow: 
+  0 0 4px rgb(2, 0, 0), 
+  0 0 11px #000, 
+  0 0 19px rgb(255, 3, 234), 
+  0 0 40px rgb(255, 3, 234), 
+  0 0 80px #2000ff, 
+  0 0 90px rgb(255, 3, 234), 
+  0 0 90px #f00, 
+  0 0 150px rgb(255, 3, 234);
+}
+
+
+.buttonss { 
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #bc13fe;
+  padding-top: 15px;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.button-home {
+  position: relative;
+  margin-left: 1%;
+  margin-top: 1.5%;
+  z-index: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: #bc13fe;
+}
+
+.button-home:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  border-radius: 10px;
+}
+
+.button-home:active {
+  color: #000
+}
+.button-home:active:after {
+
+  background: transparent;
+}
+
+.button-home:hover:before {
+  opacity: 1;
+}
+
+.button-home:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.linked {
+  text-decoration: none;
+  color: #FB02D4;;
+}*/

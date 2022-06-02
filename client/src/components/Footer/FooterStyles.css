@@ -1,0 +1,40 @@
+/*.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15px;
+  border-top: rgb(0, 240, 212) solid 2px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 38px;
+  margin-top: 5px;
+  animation: flash 0.5s infinite alternate;
+}
+
+.footer-span {
+  font-weight: 600;
+  color: rgb(0, 240, 212);
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+@keyframes flash {
+  20%,
+  40%,
+  60%,
+  80%,
+  90%,
+  100% {
+    text-shadow: -0.2rem -0.2rem 1rem rgb(0, 255, 42), 0.2rem 0.2rem 1rem #bc13fe,
+      0 0 2rem var(--neon-text-color), 0 0 4rem var(--neon-text-color),
+      0 0 6rem var(--neon-text-color), 0 0 8rem var(--neon-text-color),
+      0 0 10rem var(--neon-text-color);
+  }
+
+  5%,
+  10%,
+  15% {
+    text-shadow: none;
+  }
+}*/

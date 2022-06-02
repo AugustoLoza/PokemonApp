@@ -1,0 +1,50 @@
+/*.error_container{
+  flex-direction: column;
+  background-color: black;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.gifRocket{
+  width: 650px;
+  height: 350px
+}
+
+.error{ 
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: 'Exo 2', sans-serif;
+  color: rgb(212, 6, 248);
+}
+
+.spanError{
+  color: aqua;
+  padding-bottom: 15px;
+}
+
+.btn-goHome{
+  padding: 9px 12px 9px 12px;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(0, 240, 212);
+  background: transparent;
+  border-radius: 8px;
+  border: 1px solid;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.btn-goHome:hover{
+  color: rgb(212, 6, 248);
+}
+
+.errorCode {
+  color: aqua;
+  font-size: 35px;
+}*/

@@ -1,0 +1,86 @@
+/*.aside-container {
+  display: flex;
+  position: relative;
+  font-family: 'Exo 2', sans-serif;
+  width: fit-content;
+  margin: auto;
+  margin-top: 15px;
+}
+
+
+.label{
+  color:  rgb(0, 0, 0);
+  font-size: 25px;
+  font-weight: 700;
+  font-family: 'Exo 2', sans-serif;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px #0fa,
+    0 0 80px #0fa,
+    0 0 90px #0fa,
+    0 0 100px #0fa,
+    0 0 150px #0fa;
+  float: left;
+  margin-left: 35px;
+  margin-top: 0px;
+}
+
+.select {
+  color: #d300fd;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Exo 2', sans-serif;
+  background-color: black;
+  padding: 9px;
+  border: solid 1px;
+  border-color: rgb(0, 240, 212);;
+  border-radius: 5px;
+  /* float: left; */
+  /*margin-left: 25px;
+}
+
+.options {
+  color: #2fff00;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+  background-color: #000;
+}
+
+.btn-reload {
+  font-size: 12px;
+  font-weight: 600;
+  font-style: italic;
+  color: #000000;
+  /* background: #4ca737; */
+ /* margin-left: 20px;
+  cursor: pointer;
+  padding: 8px;
+  transition: 0.3s ease-in-out;
+  border: 0.1rem solid rgb(246, 246, 246);
+  border-radius:  2rem;
+  box-shadow: 
+    0 0 .2rem rgb(0, 0, 0),
+    0 0 .2rem #fff,
+    0 0 0.2rem #2fff00,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #2fff00,
+    inset 0 0 1.3rem #bc13fe;
+  
+}
+
+.btn-reload:hover{
+  transition: 0.3s ease-in-out;
+  border: 0.1rem solid rgb(246, 246, 246);
+  border-radius:  2rem;
+  box-shadow: 
+    0 0 .2rem rgb(0, 0, 0),
+    0 0 .2rem #fff,
+    0 0 0.2rem #bc13fe,
+    0 0 0.8rem #2fff00,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #2fff00;
+}*/
