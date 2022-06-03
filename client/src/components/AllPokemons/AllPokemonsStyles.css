@@ -1,24 +1,33 @@
-/*.main-pokemons-card{
+.main-pokemons-card{
   position: relative;
-  box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(6, 304px);
+  grid-template-columns: repeat(6, 235px);
   margin: auto;
-  min-height: 65vh;
-  border: 3.2px solid #fff;
-  border-radius:  16px;
+  min-height: 80vh;
+  margin: auto;
   padding: 56px;
   justify-content: center;
-  padding-top: 80px;
+  padding-top: 0px;
   margin-top: 20px;
-  box-shadow: 
-    0 0 3.2px #fff,
-    0 0 3.2px rgb(251, 0, 0),
-    0 0 3.2px #bc13fe,
-    0 0 12.8px #bc13fe,
-    0 0 44.8px #bc13fe,
-    inset 0 0 20.8px #bc13fe;
+ 
 }
+/*box-sizing: border-box;
+border: 3.2px solid #fff;
+  border-radius:  16px;
+  box-shadow: 
+  0 0 3.2px #fff,
+  0 0 3.2px rgb(251, 0, 0),
+  0 0 3.2px #fedb13,
+  0 0 12.8px #fedb13,
+  0 0 44.8px #fedb13,
+  inset 0 0 20.8px #fedb13;*/
+/*text-shadow: 0px 0px 10px #FFF,
+4px 2px 12px #c88ff1,
+-4px 2px 12px #b96df0,
+0px -6px 14px #ad52ee,
+0px -12px 14px #a43dee,
+0px -20px 14px #8318cf,
+0px -30px 14px #0A7BFF;*/
 
 .pagination {
   display: flex;
@@ -27,28 +36,49 @@
   justify-content: center;
   font-weight: bold;
   font-size: 16px;
-  color: #bc13fe;
-  padding-top: 15px;
+  color: #d4b710 solid;
+  text-shadow: 0px 0px 10px #FFF,
+4px 2px 12px #c88ff1,
+-4px 2px 12px #b96df0,
+0px -6px 14px #ad52ee,
+0px -12px 14px #a43dee,
+0px -20px 14px #8318cf,
+0px -30px 14px #0A7BFF;
+  padding-top: 0px;
+  margin-top: -135px;
 }
 
 .pagination-button {
   padding: 9px 12px 9px 12px;
   font-weight: bold;
   font-style: italic;
-  color: rgb(0, 240, 212);
+  color: black;
   background: transparent;
   border-radius: 8px;
   border: 1px solid;
   margin-left: 10px;
   cursor: pointer;
+  box-shadow:   0 0 3.2px #fff,
+  0 0 3.2px rgb(251, 0, 0),
+  0 0 3.2px #fedb13,
+  0 0 12.8px #fedb13,
+  0 0 44.8px #fedb13,
+  inset 0 0 20.8px #fedb13;;
 }
 
 .pagination-button:active {
-  border-color: #00ff04;
+  border-color: #d300fd;
 }
 
 .pagination-button:hover {
-  color: #d300fd;
+  color: black;
+  box-shadow: 
+    0 0 .2rem rgb(0, 0, 0),
+    0 0 .2rem #fff,
+    0 0 0.2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe;
 }
 
 .a{
@@ -76,4 +106,4 @@
 
 .linked {
   text-decoration: none;
-}*/
+}

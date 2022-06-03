@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./LadingStyles.css";
-import imgLanding from "../../assets/IMAGE_LANDING_PNG.png";
+import imgLanding from "../../assets/IMGLANDING.jpg";
 
 export function LandingPage() {
   return (
@@ -10,7 +10,7 @@ export function LandingPage() {
     <div>
     </div>
       <Link to="/pokemons/">
-        <button className="btn">WELCOME</button>
+        <button className="btn">COMIENZA!</button>
       </Link>
     </div>
   );

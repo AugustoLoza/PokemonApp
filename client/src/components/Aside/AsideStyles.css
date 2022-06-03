@@ -1,4 +1,4 @@
-/*.aside-container {
+.aside-container {
   display: flex;
   position: relative;
   font-family: 'Exo 2', sans-serif;
@@ -14,14 +14,13 @@
   font-weight: 700;
   font-family: 'Exo 2', sans-serif;
   text-shadow:
-    0 0 4px #fff,
-    0 0 11px #fff,
-    0 0 19px #fff,
-    0 0 40px #0fa,
-    0 0 80px #0fa,
-    0 0 90px #0fa,
-    0 0 100px #0fa,
-    0 0 150px #0fa;
+  0px 0px 10px #FFF,
+  4px 2px 12px #c88ff1,
+  -4px 2px 12px #b96df0,
+  0px -6px 14px #ad52ee,
+  0px -12px 14px #a43dee,
+  0px -20px 14px #8318cf,
+  0px -30px 14px #0A7BFF;
   float: left;
   margin-left: 35px;
   margin-top: 0px;
@@ -32,22 +31,22 @@
   font-size: 12px;
   font-weight: 600;
   font-family: 'Exo 2', sans-serif;
-  background-color: black;
+  background-image: url("https://wallpaperaccess.com/full/3544248.jpg");
   padding: 9px;
   border: solid 1px;
-  border-color: rgb(0, 240, 212);;
+  border-color: rgb(171, 7, 204);;
   border-radius: 5px;
   /* float: left; */
-  /*margin-left: 25px;
+  margin-left: 25px;
 }
 
-.options {
-  color: #2fff00;
+.options  {
+  color: #a43dee;
   font-size: 15px;
   font-weight: 500;
   font-family: 'Exo 2', sans-serif;
   text-align: center;
-  background-color: #000;
+  background-color: #000000;
 }
 
 .btn-reload {
@@ -56,19 +55,22 @@
   font-style: italic;
   color: #000000;
   /* background: #4ca737; */
- /* margin-left: 20px;
+  margin-left: 20px;
   cursor: pointer;
   padding: 8px;
   transition: 0.3s ease-in-out;
   border: 0.1rem solid rgb(246, 246, 246);
   border-radius:  2rem;
   box-shadow: 
-    0 0 .2rem rgb(0, 0, 0),
-    0 0 .2rem #fff,
-    0 0 0.2rem #2fff00,
-    0 0 0.8rem #bc13fe,
-    0 0 2.8rem #2fff00,
-    inset 0 0 1.3rem #bc13fe;
+  0 0 3.2px #fff,
+  0 0 3.2px rgb(251, 0, 0),
+  0 0 3.2px #fedb13,
+  0 0 12.8px #fedb13,
+  0 0 44.8px #fedb13,
+  inset 0 0 20.8px #fedb13;
+    background-image: url("https://wallpaperaccess.com/full/3544248.jpg");
+  background-position: 700px;
+  
   
 }
 
@@ -80,7 +82,7 @@
     0 0 .2rem rgb(0, 0, 0),
     0 0 .2rem #fff,
     0 0 0.2rem #bc13fe,
-    0 0 0.8rem #2fff00,
+    0 0 0.8rem #bc13fe,
     0 0 2.8rem #bc13fe,
-    inset 0 0 1.3rem #2fff00;
-}*/
+    inset 0 0 1.3rem #bc13fe;
+}

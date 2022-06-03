@@ -1,4 +1,4 @@
-/*.error_container{
+.error_container{
   flex-direction: column;
   background-color: black;
   position: relative;
@@ -47,4 +47,4 @@
 .errorCode {
   color: aqua;
   font-size: 35px;
-}*/
+}

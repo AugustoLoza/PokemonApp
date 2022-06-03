@@ -1,8 +1,66 @@
-/*.btn-search{
-  font-size: 14px;
+.btn-search{
+  display: inline;
+  font-size: 16px;
+  font-weight: 200;
+  font-style: italic;
+  color: black;
+  background-image: url("https://wallpaperaccess.com/full/3544248.jpg");
+  background-position: 1500px;
+  padding: 9px;
+  margin-left: 7px;
+  border: 3.4px solid #fff;
+  border-radius: 32px;
+  text-decoration: none;
+  text-align: right;
+  animation: flicker 1.5s infinite alternate;
+  position: absolute;  
+  cursor: pointer;   
+  
+  box-shadow: 
+    0 0 3.2px #fff,
+    0 0 3.2px rgb(251, 0, 0),
+    0 0 3.2px #fedb13,
+    0 0 12.8px #fedb13,
+    0 0 44.8px #fedb13,
+    inset 0 0 20.8px #fedb13;
+}
+
+.btn-search:hover{
+  transition: 0.3s ease-in-out;
+  border: 0.1rem solid rgb(246, 246, 246);
+  border-radius:  2rem;
+  box-shadow: 
+    0 0 .2rem rgb(0, 0, 0),
+    0 0 .2rem #fff,
+    0 0 0.2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe;
+}
+/*display: inline;
+font-size: 16px;
+font-weight: 200;
+font-style: italic;
+color: black;
+padding: 2px 16px 8px;
+border: 3.4px solid #fff;
+border-radius: 32px;
+text-decoration: none;
+text-align: right;
+animation: flicker 1.5s infinite alternate;     
+margin-left: 35px;
+box-shadow: 
+  0 0 3.2px #fff,
+  0 0 3.2px rgb(251, 0, 0),
+  0 0 3.2px #fedb13,
+  0 0 12.8px #fedb13,
+  0 0 44.8px #fedb13,
+  inset 0 0 20.8px #fedb13;*/
+
+  /*font-size: 14px;
   font-weight: 600;
   font-style: italic;
-  background-color: #000000;
+  background-color: #e41515;
   color: #fff;
   border: 0.2rem solid #fff;
   border-radius: 2rem;
@@ -12,25 +70,25 @@
   padding: 9px;
   margin-left: 7px;
   transition: 0.5s ease-in-out;
-  position: absolute;
-}
+  position: absolute;*/
 
 
 .input-search{
   width:230px;
-  color: rgb(230, 0, 255);
+  color: #42066d;
   font-size: 15px;
   font-weight: 600;
   font-family: 'Exo 2', sans-serif;
   background: none;
   padding: 9px;
   border: solid 1px;
-  border-bottom: #00ff00 solid 5px;
+  border-bottom: #fedb13 solid 5px;
   border-radius: 15px;
-  border-right: #00ff00 solid 5px;
+  border-right: #fedb13 solid 5px;
 }
 
 .input-search::placeholder {
-  color: #00ff00;
+  color: #fedb13;
+
   font-style: italic;
-}*/
+}

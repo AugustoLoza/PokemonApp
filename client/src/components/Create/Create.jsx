@@ -5,7 +5,7 @@ import { Footer } from "../Footer/Footer";
 import { postPokemon, getTypes, getAllPokemons,} from "../../redux/action.pokemons";
 import { useDispatch, useSelector } from "react-redux";
 import "./CreateStyles.css";
-import imageCreate from "../../assets/ImageCreate.png"
+import imageCreate from "../../assets/IMGCreate.jpg"
 
 //Validacion del formulario:
 import { validate } from "./validateForm";

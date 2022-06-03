@@ -1,13 +1,15 @@
-/*.card-pokemon-container {
+.card-pokemon-container {
   width: 190px;
   height: 220px;
-  border-radius: 10px;
-  background-color: #0000008f;
+  border-radius: 15px;
+  background-image: url("https://i.pinimg.com/originals/e1/07/7a/e1077a7c10ba1f0665d0073c23e6f8ba.jpg");
+  background-position: 150px;
   box-shadow: 1px 0px 60px -27px rgb(76, 11, 255);
   position: relative;
   overflow: hidden;
   margin: auto;
   text-decoration: none;
+  
 }
 
 .card-pokemon-container::before {
@@ -15,8 +17,6 @@
   position: absolute;
   width: 59px;
   height: 195%;
-  background: linear-gradient(#00ff04, rgb(255, 0, 230));
-  animation: animate 4s linear infinite;
   border-radius: 10px;
   margin-top: -73px;
   margin-left: 24px;
@@ -27,18 +27,11 @@
   content: "";
   position: absolute;
   inset: 4px;
-  background: #000000;
+  
   border-radius: 10px
 }
 
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+
 
 .poke-img {
   max-width: 115px;
@@ -53,7 +46,14 @@
 .poke-name {
   font-family: 'Exo 2', sans-serif;
   cursor: pointer;
-  color: rgb(0, 229, 255);
+  color:black;
+  text-shadow: 0px 0px 10px #FFF,
+  4px 2px 12px #DCB500,
+  -4px 2px 12px #DCB500,
+  0px -6px 14px #FF7A00,
+  0px -12px 14px #FF6300,
+  0px -20px 14px #FF4400,
+  0px -30px 14px #0A7BFF;
   text-align: center;
   font-size: 20px;
   position: relative;
@@ -61,15 +61,30 @@
 }
 
 .poke-name:hover {
-  color: #3af63a
+  color: #189bcf;
+  text-shadow: 0px 0px 10px #FFF,
+  4px 2px 12px #ffc9c9,
+  -4px 2px 12px #ff9f9f,
+  0px -6px 14px #ff7575,
+  0px -12px 14px #ff4b4b,
+  0px -20px 14px #f71b1b,
+  0px -30px 14px #f50000;
+  
 }
 
 .poke-types {
   font-family: 'Exo 2', sans-serif;
   font-size: 20px;
-  color: #a83af6;
+  color: black;
+  text-shadow: 0px 0px 10px #FFF,
+  4px 2px 12px #c88ff1,
+  -4px 2px 12px #b96df0,
+  0px -6px 14px #ad52ee,
+  0px -12px 14px #a43dee,
+  0px -20px 14px #8318cf,
+  0px -30px 14px #0A7BFF;
   text-align: center;
   margin: auto;
   position: relative;
   z-index: 10;
-}*/
+}
