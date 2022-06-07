@@ -14,13 +14,13 @@
   font-weight: 700;
   font-family: 'Exo 2', sans-serif;
   text-shadow:
-  0px 0px 10px #FFF,
-  4px 2px 12px #c88ff1,
-  -4px 2px 12px #b96df0,
-  0px -6px 14px #ad52ee,
-  0px -12px 14px #a43dee,
-  0px -20px 14px #8318cf,
-  0px -30px 14px #0A7BFF;
+  0px 0px 4px #FFF,
+4px 2px 5px #c88ff1,
+-4px 2px 5px #b96df0,
+0px -4px 5px #ad52ee,
+0px -7px 5px #a43dee,
+0px -8px 5px #8318cf,
+0px -10px 5px #0A7BFF;
   float: left;
   margin-left: 35px;
   margin-top: 0px;

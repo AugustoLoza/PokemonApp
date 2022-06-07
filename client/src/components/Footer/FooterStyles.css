@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
-  border-top: black solid 2px;
+  
   position: absolute;
   bottom: 0px;
   width: 100%;
@@ -14,9 +14,18 @@
 
 .footer-span {
   font-weight: 600;
-  color: black;
+  color: rgb(119, 231, 15);
   margin-top: 15px;
   font-size: 12px;
+  text-shadow:
+  0 0 2px black ,
+  0 0 11px rgb(0, 0, 0), 
+  0 0 19px #05f9e2, 
+  0 0 40px #03e9f4, 
+  0 0 80px #03e9f4, 
+  0 0 90px #03e9f4, 
+  0 0 100px #03e9f4, 
+  0 0 150px #03e9f4;;
 }
 
 

@@ -14,6 +14,8 @@ export const RESET_DETAIL = "RESET_DETAIL";
 export const SET_LOADING = "SET_LOADING";
 
 
+
+
 // -------------------> RUTAS BACK <-------------------
 export const URL_ALL_POKEMON = "http://localhost:3001/pokemons"
 export const URL_POST_POKEMON = "http://localhost:3001/pokemons/create"
@@ -37,6 +39,19 @@ export function getAllPokemons() {
   };
 }
 
+/*export const getAllPokemons = () => (dispatch) => {
+  return fetch(`${URL_ALL_POKEMON}`)
+      .then((res) => res.json())
+      .then((json) => {
+          
+          dispatch({ type: GET_ALL_POKEMONS, payload: json });
+      });
+      .catch((error) => {
+          return error;
+        });
+};
+*/
+
 
 export function getNamePokemon(name) {
   return async function (dispatch) {
@@ -55,11 +70,12 @@ export function getNamePokemon(name) {
   };
 }
 
+
 export function getPokemonId(id) {
   return async function (dispatch) {
     try {
       let jsonPokemonID = await axios.get(
-        `http://localhost:3001/pokemons/${id}`
+        `${URL_ALL_POKEMON}/${id}`
       );
       // console.log(jsonPokemonID);
       return dispatch({
@@ -71,6 +87,22 @@ export function getPokemonId(id) {
     }
   };
 }
+
+ /*export const getPokemonId= (id) => {
+    return async function (dispatch) {
+       return await fetch(`${URL_ALL_POKEMON}/${id}`)
+        .then((res) => res.json())
+        .then((jsonPokemonID) => {
+          return dispatch({
+           type: GET_DETAILS,
+            payload: jsonPokemonID,
+           });
+        }).catch((error) => console.error("Error:", error))
+        
+        
+         
+    };
+   };*/
 
 
 
@@ -90,6 +122,26 @@ export function postPokemon(payload) {
     }
   };
 }
+
+ /*export const postPokemon = (payload) => {
+   return async function (dispatch) {
+     return await fetch(URL_POST_POKEMON, {
+       method: "POST",
+      body: JSON.stringify(payload),
+      headers: {
+         "Content-Type": "application/json",
+      },
+     })
+      .then((res) => res.json())
+      .catch((error) => console.error("Error:", error))
+      .then((pokemonCreated) => {
+       return dispatch({
+         type: POST_POKEMON,
+         payload: pokemonCreated,
+        });
+      });
+ };
+ };*/
 
 
 export function reset() {
@@ -134,6 +186,8 @@ export function orderByAttack(payload) {
   };
 }
 
+
+
 export function setLoading(value) {
   return {
     type: SET_LOADING,
@@ -161,6 +215,20 @@ export function getTypes() {
   };
 }
 
+/*export const getTypes = () => {
+   return async function (dispatch) {
+     return await fetch(URL_TYPES)
+      .then((res) => res.json())
+      .then((jsonTypes) => {
+        return dispatch({
+          type: GET_TYPES,
+          payload: jsonTypes,
+        });
+      })
+      .catch((error) => console.log(error));
+  };
+ };*/
+
 
 export function filterByTypes(payload) {
   try {
@@ -173,4 +241,6 @@ export function filterByTypes(payload) {
     return alert("Error: falló el filtro de este Type. ¡Intenta de nuevo!");
   }
 }
+
+/**/
 

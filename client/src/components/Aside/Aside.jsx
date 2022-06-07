@@ -6,6 +6,7 @@ import {
   orderByName,
   orderByAttack,
   resetDetail,
+  
 } from "../../redux/action.pokemons";
 import "./AsideStyles.css";
 
@@ -53,6 +54,8 @@ export function Aside() {
     setOrder(`Order by ${e.target.value}`);
   }
 
+ 
+
   return (
     <div>
       <aside class="aside-container">
@@ -89,6 +92,7 @@ export function Aside() {
               Max to Min
             </option>
           </select>
+          
         </div>
 
         <div class="filtrado">

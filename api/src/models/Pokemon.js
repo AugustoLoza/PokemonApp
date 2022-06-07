@@ -19,6 +19,7 @@ module.exports = (sequelize) => {
         len: [0, 15]
       }
     },
+    
     sprites: {
       type: DataTypes.STRING(20000),
       allowNull: true,

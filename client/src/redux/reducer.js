@@ -11,6 +11,9 @@ import {
   RESET,
   RESET_DETAIL,
   SET_LOADING,
+  
+  
+  
 } from "./action.pokemons"
 
 const initialState = {
@@ -76,7 +79,8 @@ export function rootReducer(state= initialState, action){
         let value = action.payload;
         const filterByOrigin = state.pokemons.filter((pokemons) => {
           let resultado =
-            value === "pokemonApi"
+             
+               value === "pokemonApi"
               ? pokemons.id < 10000
               : value === "createdPokemon"
               ? pokemons.id >= 10000
@@ -129,6 +133,7 @@ export function rootReducer(state= initialState, action){
           ...state,
           backUp: pokemonOrderByAttack,
         };
+      
   
       case RESET:
         return {
@@ -148,6 +153,10 @@ export function rootReducer(state= initialState, action){
           ...state,
           pokemons: action.payload ? [] : state.pokemons,
         };
+
+     
+
+       
   
       default:
         return state;

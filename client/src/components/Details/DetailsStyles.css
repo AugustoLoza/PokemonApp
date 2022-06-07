@@ -159,7 +159,7 @@
   top: 0;
   border-radius: 10px;
 }
-.linked {
+.linked2 {
   
   color: #000000;
   text-shadow: 0px 0px 10px #FFF,
@@ -170,7 +170,7 @@
 0px -15px 10px #118a1b,
 0px -12px 7px #00910c;
 }
-.linked:hover {
+.linked2:hover {
   transition: 0.3s ease-in-out;
   box-shadow: 
     0 0 .2rem rgb(0, 0, 0),

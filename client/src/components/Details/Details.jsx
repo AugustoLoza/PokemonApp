@@ -7,18 +7,31 @@ import { ErrorPage } from "../ErrorPage/ErrorPage";
 import { NavBar } from "../Nav/NavBar";
 import { Footer } from "../Footer/Footer";
 import  imgDetails from "../../assets/ImgDetails7.png"
-import { getPokemonId, resetDetail } from "../../redux/action.pokemons";
+import { getPokemonId, resetDetail} from "../../redux/action.pokemons";
+
+
+
 import "./DetailsStyles.css";
 
 export function Details() {
   const dispatch = useDispatch();
   const params = useParams(); //Para obtener el ID por Params
   const onePokemon = useSelector((state) => state.detail);
+  
+
+  
+  
+  
 
   useEffect(() => {
     dispatch(getPokemonId(params.id));
     dispatch(resetDetail());
   }, [dispatch, params.id]);
+
+  
+  
+  
+
 
   if (!onePokemon.name) {
     return (
@@ -69,17 +82,22 @@ export function Details() {
               </div>
               <div>
                 <h4>{`WEIGHT: ${onePokemon.weight}`}</h4>
+               
               </div>
+               
             </div>
           </div>
+          
           <div class="buttonss">
+          
+         
             <button class="button-home">
-              <Link to="/pokemons/" class="linked">
+              <Link to="/pokemons/" class="linked2">
                 Back to top
               </Link>
             </button>
             <button class="button-home">
-              <Link to="/create" class="linked">
+              <Link to="/create" class="linked2">
                 Create a pokemon
               </Link>
             </button>

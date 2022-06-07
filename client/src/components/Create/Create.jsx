@@ -5,7 +5,7 @@ import { Footer } from "../Footer/Footer";
 import { postPokemon, getTypes, getAllPokemons,} from "../../redux/action.pokemons";
 import { useDispatch, useSelector } from "react-redux";
 import "./CreateStyles.css";
-import imageCreate from "../../assets/IMGCreate.jpg"
+import imageCreate from "../../assets/ImageCreate2.jpg"
 
 //Validacion del formulario:
 import { validate } from "./validateForm";
@@ -107,8 +107,7 @@ export function Create() {
   return (
     <div className="create_container">
         <img className="imgCreate" src={imageCreate} alt="" />
-      <h1 className="title">¡create your pokemon!</h1>
-      <h1 className="title2">¡create your pokemon!</h1>
+     
       <form className="form" onSubmit={handleSubmit}>
         <div className="info-form">
 
@@ -284,8 +283,8 @@ export function Create() {
           </Link>
         </div>
       </form>
-      <div>
-        <Footer />
+      <div className="footerCreate">
+        <Footer  />
       </div>
     </div>
   );
