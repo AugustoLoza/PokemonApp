@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from "./store/store.js";
 
+
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
@@ -19,3 +20,19 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+/*const deletePokemon = async(req,res)=>{
+  const {id = ""} = req.params;
+  
+ try {const pokemon = await Pokemon.findByPk(id);
+  if(pokemon)
+  {
+  await pokemon.destroy();
+  res.json(pokemon)
+  
+ } catch (error) {
+ res.status(404).json({"el mensaje que quieras"})
+ }   
+}
+}*/

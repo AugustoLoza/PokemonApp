@@ -7,7 +7,7 @@ import { ErrorPage } from "../ErrorPage/ErrorPage";
 import { NavBar } from "../Nav/NavBar";
 import { Footer } from "../Footer/Footer";
 import  imgDetails from "../../assets/ImgDetails7.png"
-import { getPokemonId, resetDetail} from "../../redux/action.pokemons";
+import { getPokemonId, resetDetail, } from "../../redux/action.pokemons";
 
 
 
@@ -17,11 +17,12 @@ export function Details() {
   const dispatch = useDispatch();
   const params = useParams(); //Para obtener el ID por Params
   const onePokemon = useSelector((state) => state.detail);
+
   
 
   
   
-  
+ 
 
   useEffect(() => {
     dispatch(getPokemonId(params.id));
@@ -64,6 +65,7 @@ export function Details() {
                 ? onePokemon.types.map((e) => "  " + e).join(" - ")
                 : onePokemon.types}
             </div>
+            
             <div class="description">
               <div>
                 <h4>{`HP: ${onePokemon.hp}`}</h4>
@@ -90,7 +92,7 @@ export function Details() {
           
           <div class="buttonss">
           
-         
+          
             <button class="button-home">
               <Link to="/pokemons/" class="linked2">
                 Back to top

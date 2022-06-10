@@ -1,5 +1,5 @@
 import React from "react";
-import imageLoading from "../../assets/ImageLoading.gif";
+import imageLoading from "../../assets/ImageLoading3.gif";
 import "./LoadingStyles.css";
 export function Loading() {
   return (

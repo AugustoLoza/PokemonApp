@@ -16,10 +16,14 @@ export const SET_LOADING = "SET_LOADING";
 
 
 
+
+
 // -------------------> RUTAS BACK <-------------------
 export const URL_ALL_POKEMON = "http://localhost:3001/pokemons"
 export const URL_POST_POKEMON = "http://localhost:3001/pokemons/create"
 export const URL_TYPES = "http://localhost:3001/types"
+
+
 
 export function getAllPokemons() {
   return async function (dispatch) {
@@ -58,6 +62,8 @@ export function getNamePokemon(name) {
     try {
       if (name.search(/^[a-zA-Zñáéíóúü]*$/)) {
         return alert("El nombre a buscar solo debe contener letras.");
+      }if(!name){
+        return alert("este campo no puede estar vacío");
       }
 
       return dispatch({
@@ -228,6 +234,8 @@ export function getTypes() {
       .catch((error) => console.log(error));
   };
  };*/
+
+
 
 
 export function filterByTypes(payload) {

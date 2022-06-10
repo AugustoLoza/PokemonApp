@@ -14,7 +14,7 @@ export function validate(input) {
   if (input.name.length > 15) {
     errors.name = "Name cannot exceed 15 characters";
   }
-
+  
 
   //Hp
 
@@ -69,7 +69,7 @@ export function validate(input) {
 
   //Types
 
-  if (!input.types) {
+  if (!input.types.length ) {
     errors.types = "You must select at least one type.";
   } else if (input.types.length > 2) {
     errors.types = "only maximum two types are allowed";

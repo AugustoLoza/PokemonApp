@@ -27,31 +27,49 @@ async function PokeApi() {
             speed: dataPoke.stats[5].base_stat,
             height: dataPoke.height,
             weight: dataPoke.weight,
+            
         }
 
     })
     return attributesPoke
 
-    //return console.log(attributesPoke)
+   
 }
 
-//console.log(PokeApi())
+
 
 //-------------funcion que  trae todos los pokemons de la DB-------------
 
-async function PokeDB() {
-    try {
-        const infoPokeDb = await Pokemon.findAll({
-            include: {
-                attributes: ["name"],
-                model: Type,
-                through: {
-                    attributes: [],
-                },
-            }
-        })
-        return infoPokeDb
 
+
+let PokeDB = async () => {
+    try {
+        let data = await Pokemon.findAll({
+            include:[{
+                model: Type,
+                attributes: ['name'],
+                through: {
+                    attributes: []
+                }
+            }]
+        })
+
+        let response = await data?.map(pokemon => {
+            return {id: pokemon.dataValues.id,
+                name: pokemon.dataValues.name,
+                hp: pokemon.dataValues.hp,
+                attack: pokemon.dataValues.attack,
+                defense: pokemon.dataValues.defense,
+                speed: pokemon.dataValues.speed,
+                height: pokemon.dataValues.height,
+                weight: pokemon.dataValues.weight,
+                sprites: pokemon.dataValues.sprites,
+                types: pokemon.dataValues.types?.map(type => type.name)}
+            
+        });
+        
+        
+        return response
     } catch (error) {
         console.log(error)
     }
@@ -87,6 +105,7 @@ async function PokeXid(id) {
                             through: {
                                 attributes: [],
                             },
+                           
                         },
                     ],
                     through: {
@@ -112,6 +131,7 @@ async function PokeXid(id) {
                 speed: pokeId.data.stats[5].base_stat,
                 height: pokeId.data.height,
                 weight: pokeId.data.weight,
+                
             }
             return attrPoke
         }

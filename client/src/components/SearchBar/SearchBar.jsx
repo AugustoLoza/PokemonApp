@@ -23,7 +23,7 @@ export function SearchBar() {
   return (
     <div class="search-container">
       <input
-        value={name}
+        value={name}   
         class="input-search"
         onChange={(e) => handleInputChange(e)}
         type="text"

@@ -5,10 +5,12 @@ import {
   getAllPokemons,
   getTypes,
   resetDetail,
+  
 } from "../../redux/action.pokemons";
 import { Loading } from "../Loading/Loading";
 import "./AllPokemonsStyles.css";
 import { Link } from "react-router-dom";
+
 
 export function AllPokemon() {
   let dispatch = useDispatch();
@@ -26,6 +28,8 @@ export function AllPokemon() {
   const pokemonData = useSelector((state) =>
     state.backUp ? state.backUp.slice(firstPoke, lastPokemon) : false
   );
+
+  
 
   const back = () => {
     if (counterPokemon !== 1) {
@@ -55,6 +59,7 @@ export function AllPokemon() {
     dispatch(resetDetail());
     dispatch(getAllPokemons());
     dispatch(getTypes());
+    
   }, [dispatch]);
 
   if (errorRender.length === 0) {
@@ -75,6 +80,7 @@ export function AllPokemon() {
                 <Pokemon
                   key={index}
                   name={p.name}
+                  colors={p.colors}
                   types={p.types}
                   sprites={p.sprites}
                   hp={p.hp}

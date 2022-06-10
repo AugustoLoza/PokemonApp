@@ -7,15 +7,18 @@ import {
   orderByAttack,
   resetDetail,
   
+  
 } from "../../redux/action.pokemons";
 import "./AsideStyles.css";
 
 export function Aside() {
   const [, setOrder] = useState("");
   const [, setTypes] = useState("allPokemon");
+  
 
   const dispatch = useDispatch();
   const totalTypes = useSelector((state) => state.types);
+  
   // const totalPokemon = useSelector((state) => state.pokemons);
 
   useEffect(() => {
@@ -39,7 +42,7 @@ export function Aside() {
     dispatch(filterByTypes(e.target.value));
     setTypes(e.target.value);
   }
-
+  
   //Orden alfebetico:
   function handleFilterName(e) {
     e.preventDefault();
@@ -138,6 +141,7 @@ export function Aside() {
                   </option>
                 ))}
           </select>
+         
           <button class="btn-reload" onClick={(e) => handleReset(e)}>
             Reload
           </button>

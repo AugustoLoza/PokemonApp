@@ -40,7 +40,7 @@ async function PokemonById (req, res){
 var idRef = 10000
 async function CreatePokemon (req, res){
     try {
-        let  { name, sprites, hp, attack, defense, speed, height, weight, types,} = req.body;//datos que necesito pediur del body(form)
+        let  { name, sprites, hp, attack, defense, speed, height, weight, types, } = req.body;//datos que necesito pediur del body(form)
 
         let FoundPokeDb = await Pokemon.findOne({
             where: {
@@ -61,16 +61,19 @@ async function CreatePokemon (req, res){
         weight,
         types,
         
+
       });
      
       if (!name) return res.json({ info: "El nombre es obligatorio" });//si no existe el nombre
-      if(Array.isArray(types) && types.length){ //Consulto si lo que me llega en types es un arreglo y si tiene algo adentro.
+      if(Array.isArray(types) && types.length){//Consulto si lo que me llega en types es un arreglo y si tiene algo adentro.
+        
       let TypesDb = await Promise.all( //Armo una variable que dentro tendra una resolucion de promesas
         types.map((e) => { // Agarro la data de types y le hago un map para verificar que cada elemento exista en nuestra tabla de types
           return Type.findOne({where:{ name: e}}) 
         })
       )
      await newPoke.setTypes(TypesDb) //Una vez que se resuelva la promesa del Pokemon.create, le agrego los types
+    
 
      return res.send("Pokemon creado exitosamente");
     }
@@ -83,10 +86,13 @@ async function CreatePokemon (req, res){
 
 
 
+
+
 module.exports = {
     PokemonByQuery,
     PokemonById,
-    CreatePokemon
+    CreatePokemon,
+  
     
 }
 

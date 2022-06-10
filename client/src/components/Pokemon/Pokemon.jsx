@@ -1,7 +1,7 @@
 import React from "react";
 import "./PokemonStyles.css";
 
-export function Pokemon({ sprites, name, types }) {
+export function Pokemon({ sprites, name, types,  }) {
   return (
     <div class="card-pokemon-container" key={name}>
       <div>
@@ -26,6 +26,8 @@ export function Pokemon({ sprites, name, types }) {
           )}
         </h4>
       </div>
+      
+      
     </div>
   );
 }

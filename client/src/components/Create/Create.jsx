@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
-import { postPokemon, getTypes, getAllPokemons,} from "../../redux/action.pokemons";
+import { postPokemon, getTypes, getAllPokemons} from "../../redux/action.pokemons";
 import { useDispatch, useSelector } from "react-redux";
 import "./CreateStyles.css";
 import imageCreate from "../../assets/ImageCreate2.jpg"
@@ -14,6 +14,7 @@ export function Create() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const stateTypes = useSelector((state) => state.types);
+  
   const totalPokemon = useSelector((state) => state.pokemons);
 
   const [errors, setErrorForm] = useState({});
@@ -27,11 +28,13 @@ export function Create() {
     height: ``,
     weight: ``,
     types: [],
+    
   });
 
   useEffect(() => {
     dispatch(getTypes());
     dispatch(getAllPokemons());
+    
     // console.log(getTypes)
   }, [dispatch]);
 
@@ -58,13 +61,16 @@ export function Create() {
       types: [...input.types, e.target.value] 
     });
   };
+ 
+
+  
 
   function handleSubmit(e) {    
     e.preventDefault();
     try {
-      let findName = totalPokemon.filter((e) => e.name.toLowerCase() === input.name.toLowerCase()
+      let findName = totalPokemon.find((e) => e.name.toLowerCase() === input.name.toLowerCase()
       )
-      if (!findName) {
+      if (findName) {
         return alert("Ya existe un pokemon con este nombre. ¡Cambialo!");
       } else if (Object.keys(errors).length) {
         return alert(Object.values(errors));
@@ -78,6 +84,7 @@ export function Create() {
           height: input.height,
           weight: input.weight,
           types: input.types,
+          
         };
         // console.log(newPokemon);
         dispatch(postPokemon(newPokemon));
@@ -91,6 +98,7 @@ export function Create() {
         height: ``,
         weight: ``,
         types: [],
+        
       });
       return (
         alert(`El Pokémon fue creado con éxito.`), navigate(`/pokemons/`)
@@ -265,15 +273,12 @@ export function Create() {
             </h5>
           </div>
           
+          
         </div>
-        <div className="BTNS">
-        <button className="btn-create" type="submit">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Create
-        </button>
+        <div className="BTNS">{!input.name 
+         ? <button className="btn-create" type="submit" disabled>Create</button> 
+         : <button className="btn-create" type="submit" >Create</button>}
+       
           <Link className="btn-create" to="/pokemons/" style={{ textDecoration: "none" }}>
             <span></span>
             <span></span>

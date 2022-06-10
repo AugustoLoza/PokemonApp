@@ -14,10 +14,12 @@ import {
   
   
   
+  
 } from "./action.pokemons"
 
 const initialState = {
   pokemons:[],
+  pokemon: [],
   types: [],
   filter: [],
   detail: {},
@@ -31,6 +33,7 @@ export function rootReducer(state= initialState, action){
       return {
         ...state,
         pokemons: action.payload,
+        pokemon: action.payload,
         filter: action.payload,
         backUp: action.payload,
         errorRender: action.payload
@@ -51,6 +54,8 @@ export function rootReducer(state= initialState, action){
           pokemons: false,
         };
       }
+      
+   
 
       case GET_DETAILS:
         return { ...state, detail: action.payload };
@@ -58,7 +63,9 @@ export function rootReducer(state= initialState, action){
       case POST_POKEMON:
         return { ...state, pokemons: state.pokemons.concat(action.payload) };
   
-      case GET_TYPES:
+      
+
+        case GET_TYPES:
         return { ...state, types: action.payload };
       
       case FILTER_BY_TYPES:
@@ -67,13 +74,15 @@ export function rootReducer(state= initialState, action){
           action.payload === "allTypes"
           ? pokemons
           : pokemons.filter((e) =>
-              e.types.map((type) => type)[0] === action.payload ||
+              (e.types.map((type) => type)[0] === action.payload ||
               e.types.map((type) => type)[1] === action.payload
-            );
+            ));
         return {
           ...state,
           backUp: typesFiltered,
         };
+
+      
 
       case FILTER_BY_ORIGEN:
         let value = action.payload;
