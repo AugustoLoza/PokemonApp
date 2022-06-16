@@ -77,6 +77,7 @@ export function getNamePokemon(name) {
 }
 
 
+
 export function getPokemonId(id) {
   return async function (dispatch) {
     try {
@@ -177,6 +178,7 @@ export function filterByOrigin(payload) {
     );
   }
 }
+
 
 export function orderByName(payload) {
   return {

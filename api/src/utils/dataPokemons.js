@@ -33,14 +33,36 @@ async function PokeApi() {
     })
     return attributesPoke
 
-   
+    //return console.log(attributesPoke)
 }
 
-
+//console.log(PokeApi())
 
 //-------------funcion que  trae todos los pokemons de la DB-------------
 
+/*async function PokeDB() {
+    try {
+        const infoPokeDb = await Pokemon.findAll({
+            include: [
+                {
+                    model: Type,
+                    attributes: ["name"],
+                    through: {
+                        attributes: [],
+                    },
+                   
+                },
+            ],
+            through: {
+                attributes: []
+            }
+        })
+        return infoPokeDb
 
+    } catch (error) {
+        console.log(error)
+    }
+}*/
 
 let PokeDB = async () => {
     try {
@@ -68,7 +90,18 @@ let PokeDB = async () => {
             
         });
         
+       
         
+        
+        
+        
+        
+        
+        
+        
+
+        
+
         return response
     } catch (error) {
         console.log(error)

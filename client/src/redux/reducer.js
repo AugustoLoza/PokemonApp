@@ -15,6 +15,7 @@ import {
   
   
   
+  
 } from "./action.pokemons"
 
 const initialState = {
@@ -100,6 +101,9 @@ export function rootReducer(state= initialState, action){
           ...state,
           backUp: value === "allOrigin" ? state.pokemons : filterByOrigin,
         };
+
+     
+        
 
       case ORDER_BY_NAME:
         let pokemonSort =
