@@ -156,7 +156,7 @@ async function PokeXid(id) {
             let attrPoke = {
                 id: pokeId.data.id,
                 name: pokeId.data.name,
-                sprites: pokeId.data.sprites.other.dream_world.front_default,
+                sprites: pokeId.data.sprites.front_default,
                 types: pokeId.data.types.map(t => t.type.name),
                 hp: pokeId.data.stats[0].base_stat,
                 attack: pokeId.data.stats[1].base_stat,
