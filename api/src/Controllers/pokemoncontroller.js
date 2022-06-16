@@ -114,7 +114,7 @@ async function CreatePokemon (req, res){
     } catch (error) {
       console.error("Error in createPokemon:", error.message);
     }
-  };
+  };*/
 var idreft = 50
 async function CreateType (req, res){
     try {
@@ -140,7 +140,7 @@ async function CreateType (req, res){
     } catch (err) {
      
     }
-};*/
+};
 
 
        

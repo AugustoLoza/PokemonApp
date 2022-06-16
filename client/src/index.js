@@ -5,6 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from "./store/store.js";
+import dotenv from "dotenv";
+import axios from "axios"
+dotenv.config();
+
+axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
 
 
 ReactDOM.render(
@@ -22,17 +27,4 @@ ReactDOM.render(
 reportWebVitals();
 
 
-/*const deletePokemon = async(req,res)=>{
-  const {id = ""} = req.params;
-  
- try {const pokemon = await Pokemon.findByPk(id);
-  if(pokemon)
-  {
-  await pokemon.destroy();
-  res.json(pokemon)
-  
- } catch (error) {
- res.status(404).json({"el mensaje que quieras"})
- }   
-}
-}*/
+
