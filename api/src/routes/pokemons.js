@@ -1,5 +1,5 @@
 const {Router} = require("express");
-const { PokemonByQuery, PokemonById, CreatePokemon, CreateType  } = require("../Controllers/pokemonController");
+const { PokemonByQuery, PokemonById, CreatePokemon, CreateType  } = require("c:/Users/Augusto/PI-Pokemon-main/api/src/Controllers/pokemoncontroller");
 
 const router = Router()
 
