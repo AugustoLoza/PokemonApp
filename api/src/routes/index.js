@@ -1,6 +1,6 @@
 const { Router } = require('express');
-const pokemonsRoute = require('./pokemons.js'); 
-const typesRute = require('./typesroutes.js')
+const pokemonsRoute = require('./Pokemons.js'); 
+const typesRute = require('./Typesroutes.js')
 
 
 const router = Router();

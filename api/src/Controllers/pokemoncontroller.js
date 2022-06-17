@@ -1,7 +1,7 @@
 const axios = require ("axios");
 const {Pokemon, Type} = require ("../db");
 const { URL_API_POKEMON40, URL_API_POKEMON_NAME_ID } = require('../utils/GlobalConst');
-const {PokeApiDb, PokeXid, } = require("../utils/dataPokemons")
+const {PokeApiDb, PokeXid, } = require("../utils/DataPokemons")
 
 
 //----------------------funcion que trae por query pokemons en DB y API----------------------
@@ -22,6 +22,16 @@ async function PokemonByQuery (req, res, next){
     } catch (error) {
         next(error);
     }
+}
+
+async function AllPoke (req,res,next){
+  try {
+    let AllPokes = await PokeApiDb()
+    res.status(200).send(AllPokes)
+  } catch (error) {
+    next(error);
+    
+  }
 }
 
 
@@ -158,7 +168,8 @@ module.exports = {
     PokemonByQuery,
     PokemonById,
     CreatePokemon,
-    CreateType
+    CreateType,
+    AllPoke
     
     
   

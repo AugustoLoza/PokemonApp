@@ -1,5 +1,5 @@
 const axios = require("axios")
-const { URL_API_POKEMON_NAME_ID, URL_API_POKEMON40 } = require('../utils/GlobalConst')
+const { URL_API_POKEMON_NAME_ID, URL_API_POKEMON40 } = require('./GlobalConst')
 const { Pokemon, Type } = require('../db')
 
 //-------------funcion que  trae todos los pokemons de la API-------------
@@ -20,7 +20,7 @@ async function PokeApi() {
             id: dataPoke.id,
             name: dataPoke.name,
             types: dataPoke.types.map((t) => t.type.name), //los types estan en su propiedad name//hay algunos que tienen mas de un type, se guarda en un array ya sea 1 o mas
-            sprites: dataPoke.sprites.other.dream_world.front_default,//fijarse que coincidan los sprites
+            sprites: dataPoke.sprites.front_default,//fijarse que coincidan los sprites
             hp: dataPoke.stats[0].base_stat,
             attack: dataPoke.stats[1].base_stat,
             defense: dataPoke.stats[2].base_stat,
