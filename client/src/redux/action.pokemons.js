@@ -19,16 +19,16 @@ export const SET_LOADING = "SET_LOADING";
 
 
 // -------------------> RUTAS BACK <-------------------
-export const URL_ALL_POKEMON = "http://localhost:3001/pokemons"
-export const URL_POST_POKEMON = "http://localhost:3001/pokemons/create"
-export const URL_TYPES = "http://localhost:3001/types"
+export const URL_ALL_POKEMON = "http://localhost:5000/pokemons"
+export const URL_POST_POKEMON = "http://localhost:5000/pokemons/create"
+export const URL_TYPES = "http://localhost:5000/types"
 
 
 
 export function getAllPokemons() {
   return async function (dispatch) {
     try {
-      let jsonPokemon = await axios.get("/pokemons");
+      let jsonPokemon = await axios.get(URL_ALL_POKEMON);
       return dispatch({
         type: GET_ALL_POKEMONS,
         payload: jsonPokemon.data,
@@ -82,7 +82,7 @@ export function getPokemonId(id) {
   return async function (dispatch) {
     try {
       let jsonPokemonID = await axios.get(
-        `pokemons/${id}`
+        `${URL_ALL_POKEMON}/${id}`
       );
       // console.log(jsonPokemonID);
       return dispatch({
@@ -116,7 +116,7 @@ export function getPokemonId(id) {
 export function postPokemon(payload) {
   return async function (dispatch) {
     try {
-      const pokemonCreated = await axios.post("/pokemons/create", payload);
+      const pokemonCreated = await axios.post(URL_POST_POKEMON, payload);
       return dispatch({
         type: POST_POKEMON,
         payload: pokemonCreated.data,
@@ -209,7 +209,7 @@ export function setLoading(value) {
 export function getTypes() {
   return async function (dispatch) {
     try {
-      let jsonTypes = await axios.get("/types");
+      let jsonTypes = await axios.get(URL_TYPES);
       return dispatch({
         type: GET_TYPES,
         payload: jsonTypes.data,
